@@ -1,5 +1,22 @@
 # Playwright MCP Copilot Example
 
+## About This Framework
+
+This project demonstrates an end-to-end testing framework that combines Playwright for browser automation with Cucumber for behavior-driven development (BDD). The intention is to enable clear, maintainable, and human-readable test scenarios that map directly to automated browser actions.
+
+This repository also serves as an example of how to generate tests and a test framework using the Model Context Protocol (MCP) server and GitHub Copilot. It showcases how AI-assisted workflows can accelerate the creation of both feature files and automation code, making it easier to build robust, intention-driven test suites.
+
+- **Playwright** provides fast, reliable browser automation for modern web apps.
+- **Cucumber** allows you to write test cases in plain English using the Gherkin syntax, making tests accessible to both developers and non-developers.
+- **MCP server & Copilot**: Demonstrates how AI tools can help generate and maintain both test scenarios and framework code, streamlining the test development process.
+- **Intention-driven design**: Feature files describe user intentions and expected outcomes, while step definitions and page objects translate those intentions into robust, reusable automation code.
+
+This approach helps teams:
+
+- Collaborate on test scenarios using natural language
+- Keep automation code organized and maintainable
+- Quickly adapt tests to UI or workflow changes
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or newer recommended)
