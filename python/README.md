@@ -1,10 +1,10 @@
 # Python Test Framework (Playwright + Pytest)
 
-This folder contains a Python port of the existing TypeScript Playwright + Cucumber test framework. The TypeScript version is preserved at the project root.
+This folder contains the Python Playwright + Pytest-BDD test framework for search engine automation.
 
 ## Setup
 
-1. Create a virtual environment (optional but recommended):
+1. (Recommended) Create and activate a virtual environment:
 
 ```bash
 python -m venv .venv
@@ -20,8 +20,18 @@ python -m playwright install
 
 ## Running tests
 
-Run with pytest:
+Run all tests with:
 
 ```bash
 pytest -q
 ```
+
+## Project Structure
+
+- `tests/features/search_engine_playwright_mcp.feature`: Cucumber-style feature file
+- `tests/pages/search_engine_page.py`: Page object for search engine automation
+- `tests/steps/test_search_engine_steps.py`: Step definitions for feature file
+
+## Notes
+- All references use generic "search_engine" naming.
+- TypeScript version is not required for Python tests.
