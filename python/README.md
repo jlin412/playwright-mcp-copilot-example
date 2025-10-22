@@ -33,5 +33,6 @@ pytest -q
 - `tests/steps/test_search_engine_steps.py`: Step definitions for feature file
 
 ## Notes
+
 - All references use generic "search_engine" naming.
 - TypeScript version is not required for Python tests.

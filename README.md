@@ -1,60 +1,38 @@
-# Playwright MCP Copilot Example
+# Python Test Framework (Playwright + Pytest)
 
-## About This Framework
+This project contains the Python Playwright + Pytest-BDD test framework for search engine automation.
 
-This project demonstrates an end-to-end testing framework that combines Playwright for browser automation with Cucumber for behavior-driven development (BDD). The intention is to enable clear, maintainable, and human-readable test scenarios that map directly to automated browser actions.
+## Setup
 
-This repository also serves as an example of how to generate tests and a test framework using the Model Context Protocol (MCP) server and GitHub Copilot. It showcases how AI-assisted workflows can accelerate the creation of both feature files and automation code, making it easier to build robust, intention-driven test suites.
+1. (Recommended) Create and activate a virtual environment:
 
-- **Playwright** provides fast, reliable browser automation for modern web apps.
-- **Cucumber** allows you to write test cases in plain English using the Gherkin syntax, making tests accessible to both developers and non-developers.
-- **MCP server & Copilot**: Demonstrates how AI tools can help generate and maintain both test scenarios and framework code, streamlining the test development process.
-- **Intention-driven design**: Feature files describe user intentions and expected outcomes, while step definitions and page objects translate those intentions into robust, reusable automation code.
-
-This approach helps teams:
-
-- Collaborate on test scenarios using natural language
-- Keep automation code organized and maintainable
-- Quickly adapt tests to UI or workflow changes
-
-## Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or newer recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
-- [Git](https://git-scm.com/)
-
-## Installation
-
-Clone the repository and install dependencies:
-
-```sh
-git clone https://github.com/jlin412/playwright-mcp-copilot-example.git
-cd playwright-mcp-copilot-example
-npm install
+```bash
+python -m venv .venv
+source .venv/bin/activate
 ```
 
-## Running Cucumber Tests
+2. Install dependencies:
 
-To execute the Cucumber tests, run:
-
-```sh
-npx cucumber-js
+```bash
+pip install -r python/requirements.txt
+python -m playwright install
 ```
 
-Or to run a specific feature file:
+## Running tests
 
-```sh
-npx cucumber-js tests/duckduckgo-playwright-mcp.feature
+Run all tests with:
+
+```bash
+pytest -q python/
 ```
 
 ## Project Structure
 
-- `tests/` - Contains feature files, step definitions, and page objects
-- `src/` - Source files for the application (if any)
-- `.gitignore` - Files and folders to be ignored by git
+- `python/tests/features/search_engine_playwright_mcp.feature`: Cucumber-style feature file
+- `python/tests/pages/search_engine_page.py`: Page object for search engine automation
+- `python/tests/steps/test_search_engine_steps.py`: Step definitions for feature file
 
 ## Notes
 
-- Make sure all dependencies are installed before running tests.
-- For Playwright browser automation, the first run may download browser binaries.
-- If you encounter issues with browser launching, try running `npx playwright install`.
+- All references use generic "search_engine" naming.
+- TypeScript version is not required for Python tests.
